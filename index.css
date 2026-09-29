@@ -1,0 +1,1832 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav {
+    width: 100%;
+    min-height: 70px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+    gap: 25px;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* LEFT SIDE */
+
+.nav_left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    flex: 1;
+    min-width: 0;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logoimg {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+/* SEARCH */
+
+.search {
+    width: min(450px, 100%);
+    height: 40px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    background-color: white;
+}
+
+.search i {
+    color: #777;
+    flex-shrink: 0;
+}
+
+.search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    padding-left: 10px;
+
+    font-size: 14px;
+}
+
+
+/* RIGHT SIDE */
+
+.nav_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    flex-shrink: 0;
+}
+
+.nav_right select {
+    border: none;
+    outline: none;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* LOGIN BUTTON */
+
+.login_btn {
+    background-color: #e51b23;
+
+    color: white;
+
+    border: none;
+
+    padding: 7px 14px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.login_btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.login_btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+#menu_toggle {
+    display: none;
+}
+
+.hamburg_icon {
+    font-size: 22px;
+    color: #333;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    position: relative;
+    z-index: 3000;
+}
+
+.hamburg_icon:hover {
+    color: #f84464;
+    transform: scale(1.1);
+}
+
+#menu_toggle:checked + .hamburg_icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    right: -430px;
+
+    width: 390px;
+    max-width: 90vw;
+    height: 100vh;
+
+    overflow-y: auto;
+
+    background-color: white;
+
+    padding-top: 70px;
+
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+
+    transition: right 0.4s ease;
+
+    z-index: 2500;
+}
+
+#menu_toggle:checked ~ .sidebar {
+    right: 0;
+}
+
+
+/* SIDEBAR SCROLLBAR */
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 2000;
+}
+
+#menu_toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* SIDEBAR HEADER */
+
+.sidebar-header {
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 25px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* LOGIN BOX */
+
+.login-box {
+    min-height: 115px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    background-color: #fafafa;
+
+    border-bottom: 1px solid #ddd;
+
+    gap: 12px;
+}
+
+.profile-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 10px;
+
+    background-color: #eeeeee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #aaa;
+
+    font-size: 23px;
+
+    flex-shrink: 0;
+}
+
+.login-text {
+    flex: 1;
+}
+
+.login-text p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+
+.login-box button {
+    background-color: white;
+
+    border: 1px solid #d08b8b;
+
+    color: #8b4c4c;
+
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.login-box button:hover {
+    background-color: #8b4c4c;
+    color: white;
+}
+
+
+/* MENU */
+
+.menu-list {
+    width: 100%;
+}
+
+.menu-item {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.menu-item > i:first-child {
+    width: 25px;
+    text-align: center;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.item-content {
+    flex: 1;
+}
+
+.item-content span {
+    display: block;
+    font-size: 14px;
+}
+
+.item-content small {
+    display: block;
+    color: #888;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.arrow,
+.lock {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    color: #888;
+}
+
+
+/* =========================================================
+   CATEGORY NAVIGATION
+========================================================= */
+
+.catogries {
+    width: 100%;
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #f7f7f7;
+
+    padding: 10px 5%;
+
+    font-size: 13px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.catogries::-webkit-scrollbar {
+    display: none;
+}
+
+.catogries a {
+    color: #222;
+    text-decoration:none;
+}
+
+.catogries a:hover {
+    color: #f84464;
+}
+
+.left_side,
+.right_side {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.left_side {
+    flex-shrink: 0;
+}
+
+.right_side {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+    width: 100%;
+    background-color: rgba(100, 125, 134, 0.149);
+}
+
+
+/* =========================================================
+   HERO SLIDER
+========================================================= */
+
+.slider {
+    width: 100%;
+    height: 380px;
+
+    overflow: hidden;
+}
+
+.slider_container {
+    width: 400%;
+    height: 100%;
+
+    display: flex;
+
+    animation: sliderAnimation 16s infinite;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide1 {
+    background-image: url("./imges/banner1.jpeg");
+}
+
+.slide2 {
+    background-image: url("./imges/banner2.jpeg");
+}
+
+.slide3 {
+    background-image: url("./imges/banner3.jpeg");
+}
+
+.slide4 {
+    background-image: url("./imges/banner4.jpeg");
+}
+
+
+@keyframes sliderAnimation {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    25%,
+    45% {
+        transform: translateX(-25%);
+    }
+
+    50%,
+    70% {
+        transform: translateX(-50%);
+    }
+
+    75%,
+    95% {
+        transform: translateX(-75%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================================
+   COMMON HORIZONTAL CONTAINER
+========================================================= */
+
+.movie_container,
+.event_container {
+    width: 100%;
+
+    display: flex;
+
+    gap: 25px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    scroll-behavior: smooth;
+
+    flex-wrap: nowrap;
+}
+
+.movie_container::-webkit-scrollbar,
+.event_container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   RECOMMENDED MOVIES
+========================================================= */
+
+.recommended {
+    width: 100%;
+
+    padding: 35px 5%;
+
+    overflow: hidden;
+}
+
+.recommended h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.movie_container {
+    margin: 25px 0;
+}
+
+.movie_card {
+    width: 200px;
+    min-width: 200px;
+
+    height: 380px;
+
+    flex: 0 0 200px;
+
+    border-radius: 10px;
+}
+
+
+/* MOVIE IMAGE */
+
+.img_card {
+    width: 100%;
+    height: 290px;
+
+    background-color: black;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.img_size {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 10px 10px 0 0;
+}
+
+.img_card h5 {
+    color: white;
+    font-size: 14px;
+
+    padding: 5px;
+}
+
+.star {
+    color: #e51b23;
+}
+
+.like {
+    color: rgb(29, 148, 29);
+}
+
+
+/* MOVIE NAME */
+
+.movie_name {
+    padding-top: 10px;
+}
+
+.movie_name h6 {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.movie_name p {
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   MOVIE REEL
+========================================================= */
+
+.movie_reel {
+    width: 90%;
+    margin: 10px auto 30px;
+}
+
+.movie_reel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   LIVE EVENTS
+========================================================= */
+
+.live_event {
+    width: 100%;
+
+    padding: 40px 5%;
+
+    position: relative;
+}
+
+.live_event h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.event_container {
+    gap: 25px;
+}
+
+.event {
+    width: 200px;
+    min-width: 200px;
+
+    height: 200px;
+
+    flex: 0 0 200px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.event img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* EVENT ARROWS */
+
+.live_event .arrow {
+    position: absolute;
+
+    top: 55%;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background-color: #333;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    z-index: 5;
+}
+
+.live_event .left {
+    left: 15px;
+}
+
+.live_event .right {
+    right: 15px;
+}
+
+.live_event .arrow:hover {
+    background-color: #111;
+}
+
+
+/* =========================================================
+   PREMIERE
+========================================================= */
+
+.premiere {
+    width: 100%;
+
+    min-height: 600px;
+
+    background-color: rgba(11, 0, 40, 0.885);
+
+    padding: 40px 10%;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon_box {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background-color: #e51b23;
+
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment h5 {
+    letter-spacing: 4px;
+    font-size: 21px;
+}
+
+.comment p {
+    line-height: 1.4;
+    margin: 0;
+}
+
+.premiere_list {
+    padding-top: 30px;
+}
+
+.premiere_list .movie_container {
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   MOVIE CARD 2
+========================================================= */
+
+.movie_card2 {
+    position: relative;
+
+    width: 200px;
+    min-width: 200px;
+
+    height: 380px;
+
+    flex: 0 0 200px;
+
+    border-radius: 10px;
+}
+
+.img_card2 {
+    width: 100%;
+    height: 260px;
+
+    background-color: black;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.img_card2 img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+}
+
+.img_card2 button {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100px;
+
+    background-color: #e51b23;
+
+    color: white;
+
+    border: none;
+
+    font-size: 12px;
+
+    padding: 5px;
+}
+
+
+/* =========================================================
+   MUSIC STUDIO
+========================================================= */
+
+.music_studio {
+    width: 100%;
+
+    padding: 40px 10%;
+
+    overflow: hidden;
+}
+
+.music_studio h3,
+.popular_event h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.img_card3 {
+    width: 100%;
+    height: 290px;
+
+    background-color: black;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    color: white;
+}
+
+.img_card3 img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+}
+
+.img_card3 button {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    background-color: #e51b23;
+
+    color: white;
+
+    width: 100px;
+
+    border: none;
+
+    border-radius: 0 10px 0 10px;
+
+    font-size: 12px;
+
+    padding: 6px;
+}
+
+.img_card3 span {
+    position: absolute;
+
+    bottom: 5px;
+    left: 8px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   POPULAR EVENTS
+========================================================= */
+
+.popular_event {
+    width: 100%;
+
+    padding: 40px 10%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   LIST YOUR SHOW
+========================================================= */
+
+.bottom1 {
+    width: 100%;
+
+    min-height: 80px;
+
+    background-color: #232323;
+
+    padding: 20px 8%;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.bottom1 span {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+}
+
+.bottom1 span i {
+    color: #ddd;
+    font-size: 20px;
+}
+
+.bottom1 span button {
+    margin-left: auto;
+
+    background-color: #e51b23;
+
+    padding: 7px 15px;
+
+    color: white;
+
+    border-radius: 8px;
+
+    border: none;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+
+    background-color: #333338;
+
+    color: #aaa;
+}
+
+
+/* FOOTER FEATURES */
+
+.footer_features {
+    width: 100%;
+
+    min-height: 150px;
+
+    background-color: #29292e;
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 30px 8%;
+
+    gap: 30px;
+}
+
+.feature {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.feature i {
+    font-size: 28px;
+
+    color: #aaa;
+
+    margin-bottom: 12px;
+}
+
+.feature h4,
+.feature p {
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #ddd;
+
+    margin: 0;
+}
+
+
+/* FOOTER CONTENT */
+
+.footer_content {
+    width: 100%;
+
+    padding: 45px 10%;
+
+    background-color: #333338;
+}
+
+.footer_section {
+    margin-bottom: 28px;
+}
+
+.footer_section h3 {
+    font-size: 13px;
+
+    color: #ddd;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+}
+
+.footer_section p {
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #aaa;
+
+    margin: 0;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer_bottom {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 40px 5% 30px;
+
+    border-top: 1px solid #555;
+}
+
+.footer_logo {
+    font-size: 22px;
+
+    margin-bottom: 30px;
+}
+
+.footer_logo span {
+    color: white;
+}
+
+.footer_logo b {
+    color: #f84464;
+}
+
+.social_icons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+.social_icons i {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #777;
+
+    color: #ddd;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.social_icons i:hover {
+    background-color: #f84464;
+
+    color: white;
+
+    transform: scale(1.1);
+}
+
+.copyright {
+    color: #aaa;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+.copyright_text {
+    color: #888;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+    nav {
+        padding: 0 25px;
+        gap: 15px;
+    }
+
+    .nav_left {
+        gap: 15px;
+    }
+
+    .search {
+        width: 300px;
+    }
+
+    .nav_right {
+        gap: 12px;
+    }
+
+    .catogries {
+        padding: 10px 25px;
+    }
+
+    .left_side,
+    .right_side {
+        gap: 18px;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .recommended {
+        padding: 30px 25px;
+    }
+
+    .live_event {
+        padding: 35px 25px;
+    }
+
+    .premiere {
+        padding: 35px 50px;
+    }
+
+    .music_studio {
+        padding: 35px 50px;
+    }
+
+    .popular_event {
+        padding: 35px 50px;
+    }
+
+    .footer_content {
+        padding: 40px 50px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* NAVBAR */
+
+    nav {
+        width: 100%;
+
+        min-height: 70px;
+
+        padding: 10px 15px;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .nav_left {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+    .logoimg {
+        width: 85px;
+        height: 42px;
+    }
+
+    .search {
+        order: 3;
+
+        width: 100%;
+
+        height: 38px;
+    }
+
+    .nav_right {
+        gap: 10px;
+    }
+
+    .nav_right select {
+        font-size: 12px;
+
+        max-width: 90px;
+    }
+
+    .login_btn {
+        font-size: 12px;
+
+        padding: 6px 10px;
+    }
+
+    .hamburg_icon {
+        font-size: 20px;
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+        width: 320px;
+
+        max-width: 88vw;
+
+        padding-top: 65px;
+    }
+
+    .login-box {
+        padding: 15px;
+    }
+
+    .profile-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .login-text p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .login-box button {
+        padding: 8px 9px;
+
+        font-size: 11px;
+    }
+
+    .menu-item {
+        min-height: 65px;
+
+        padding: 12px 16px;
+    }
+
+
+    /* CATEGORIES */
+
+    .catogries {
+        min-height: 45px;
+
+        padding: 10px 15px;
+
+        justify-content: flex-start;
+
+        gap: 20px;
+
+        overflow-x: auto;
+    }
+
+    .left_side,
+    .right_side {
+        width: auto;
+
+        margin: 0;
+
+        gap: 18px;
+    }
+
+
+    /* HERO */
+
+    .slider {
+        width: 100%;
+
+        height: 200px;
+    }
+
+    .slide {
+        background-position: center;
+    }
+
+
+    /* RECOMMENDED */
+
+    .recommended {
+        padding: 25px 15px;
+    }
+
+    .recommended h3 {
+        font-size: 18px;
+    }
+
+    .movie_container {
+        gap: 15px;
+
+        margin: 20px 0;
+    }
+
+    .movie_card {
+        width: 150px;
+
+        min-width: 150px;
+
+        flex: 0 0 150px;
+
+        height: 300px;
+    }
+
+    .img_card {
+        width: 150px;
+
+        height: 220px;
+    }
+
+    .img_size {
+        width: 150px;
+
+        height: 190px;
+
+        object-fit: cover;
+    }
+
+    .img_card h5 {
+        font-size: 11px;
+
+        padding: 4px;
+    }
+
+    .movie_name {
+        padding-top: 7px;
+    }
+
+    .movie_name h6 {
+        font-size: 12px;
+    }
+
+    .movie_name p {
+        font-size: 10px;
+    }
+
+
+    /* MOVIE REEL */
+
+    .movie_reel {
+        width: 92%;
+
+        margin: 10px auto 25px;
+    }
+
+
+    /* LIVE EVENTS */
+
+    .live_event {
+        padding: 25px 15px;
+    }
+
+    .live_event h4 {
+        font-size: 18px;
+    }
+
+    .event_container {
+        gap: 15px;
+    }
+
+    .event {
+        width: 160px;
+
+        min-width: 160px;
+
+        height: 160px;
+
+        flex: 0 0 160px;
+    }
+
+    .event img {
+        width: 160px;
+
+        height: 160px;
+    }
+
+    .live_event .arrow {
+        width: 32px;
+        height: 32px;
+
+        font-size: 12px;
+    }
+
+    .live_event .left {
+        left: 5px;
+    }
+
+    .live_event .right {
+        right: 5px;
+    }
+
+
+    /* PREMIERE */
+
+    .premiere {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 30px 15px;
+    }
+
+    .comment h5 {
+        font-size: 17px;
+
+        letter-spacing: 3px;
+    }
+
+    .comment p {
+        font-size: 12px;
+    }
+
+    .premiere_list {
+        padding-top: 20px;
+
+        overflow: hidden;
+    }
+
+    .movie_card2 {
+        width: 150px;
+
+        min-width: 150px;
+
+        flex: 0 0 150px;
+    }
+
+    .img_card2 {
+        width: 150px;
+
+        height: 220px;
+    }
+
+    .img_card2 img {
+        width: 150px;
+
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+    .img_card2 button {
+        bottom: 0;
+
+        width: 75px;
+
+        font-size: 10px;
+    }
+
+
+    /* MUSIC */
+
+    .music_studio {
+        width: 100%;
+
+        padding: 30px 15px;
+    }
+
+    .music_studio h3,
+    .popular_event h3 {
+        font-size: 18px;
+    }
+
+    .img_card3 {
+        width: 150px;
+
+        height: 220px;
+    }
+
+    .img_card3 img {
+        width: 150px;
+
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+    .img_card3 button {
+        width: 75px;
+
+        right: 0;
+
+        left: auto;
+
+        font-size: 10px;
+    }
+
+    .img_card3 span {
+        font-size: 10px;
+    }
+
+
+    /* POPULAR */
+
+    .popular_event {
+        width: 100%;
+
+        padding: 30px 15px;
+    }
+
+
+    /* LIST YOUR SHOW */
+
+    .bottom1 {
+        padding: 18px 15px;
+    }
+
+    .bottom1 span {
+        display: flex;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+    .bottom1 span button {
+        margin: 5px 0 0;
+
+        padding: 7px 14px;
+    }
+
+
+    /* FOOTER */
+
+    .footer_features {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 30px 15px;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .feature i {
+        font-size: 24px;
+    }
+
+    .feature h4,
+    .feature p {
+        font-size: 11px;
+    }
+
+    .footer_content {
+        padding: 30px 20px;
+    }
+
+    .footer_section {
+        margin-bottom: 25px;
+    }
+
+    .footer_section h3 {
+        font-size: 12px;
+    }
+
+    .footer_section p {
+        font-size: 10px;
+
+        line-height: 1.8;
+    }
+
+    .footer_bottom {
+        padding: 30px 15px 20px;
+    }
+
+    .footer_logo {
+        font-size: 20px;
+
+        margin-bottom: 25px;
+    }
+
+    .social_icons {
+        gap: 10px;
+
+        margin-bottom: 25px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+
+    .copyright_text {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    nav {
+        padding: 8px 10px;
+    }
+
+    .logoimg {
+        width: 75px;
+    }
+
+    .nav_right {
+        gap: 7px;
+    }
+
+    .nav_right select {
+        max-width: 75px;
+
+        font-size: 11px;
+    }
+
+    .login_btn {
+        font-size: 10px;
+
+        padding: 5px 7px;
+    }
+
+    .hamburg_icon {
+        font-size: 18px;
+    }
+
+
+    /* HERO */
+
+    .slider {
+        height: 160px;
+    }
+
+
+    /* MOVIES */
+
+    .movie_card {
+        width: 135px;
+
+        min-width: 135px;
+
+        flex-basis: 135px;
+    }
+
+    .img_card {
+        width: 135px;
+
+        height: 205px;
+    }
+
+    .img_size {
+        width: 135px;
+
+        height: 175px;
+    }
+
+
+    /* EVENTS */
+
+    .event {
+        width: 140px;
+
+        min-width: 140px;
+
+        height: 140px;
+
+        flex-basis: 140px;
+    }
+
+    .event img {
+        width: 140px;
+
+        height: 140px;
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+        width: 290px;
+    }
+
+    .login-box {
+        gap: 8px;
+    }
+
+    .profile-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+    .login-text p {
+        font-size: 10px;
+    }
+
+    .login-box button {
+        padding: 7px;
+
+        font-size: 9px;
+    }
+}

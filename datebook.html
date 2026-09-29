@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="./datebook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="nav_left">
+        <div class="logo">
+            <img src="./imges/applogo.png" class="logoimg"/>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search for Movies,Events,Sports,Plays and Activites"></input>
+        </div>
+        </div>
+        <div class="nav_right">
+        <div>
+            <select name="Mumbai" id="Mumbai">
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi-NCR">Delhi-NCR</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Pune">Pune</option>
+            </select>
+        </div>
+        <button class="login_btn"><a href="./signup.html">
+            Sign-up</a>
+        </button>
+       
+    <input type="checkbox" id="menu_toggle">
+    <label for="menu_toggle" class="hamburg_icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    <label for="menu_toggle" class="overlay"></label>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Hey!</h2>
+        </div>
+        <div class="login-box">
+            <div class="profile-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="login-text">
+                <p>Unlock special offers &</p>
+                <p>great benefits</p>
+            </div>
+            <button>Login / Register</button>
+        </div>
+
+
+        <!-- MENU ITEMS -->
+        <div class="menu-list">
+
+            <div class="menu-item">
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="item-content">
+                    <span>Notifications</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <div class="item-content">
+                    <span>Your Orders</span>
+                    <small>View all your bookings & purchases</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-heart"></i>
+                <div class="item-content">
+                    <span>Your Wishlist</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-tv"></i>
+                <div class="item-content">
+                    <span>Stream Library</span>
+                    <small>Rented & Purchased Movies</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-credit-card"></i>
+                <div class="item-content">
+                    <span>Play Credit Card</span>
+                    <small>View your Play Credit Card details and offers</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-comment-dots"></i>
+                <div class="item-content">
+                    <span>Help & Support</span>
+                    <small>View commonly asked queries and Chat</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-gear"></i>
+                <div class="item-content">
+                    <span>Accounts & Settings</span>
+                    <small>Location, preferences and more</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-gift"></i>
+                <div class="item-content">
+                    <span>Rewards</span>
+                    <small class="text-secondary">View your rewards & unlock new ones</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-regular fa-life-ring"></i>
+
+                <div class="item-content">
+                    <span>BookAChange</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+        </div>
+    </aside>
+</nav>
+    <div class="catogries">
+        <div class="left_side">
+            <a href="./movie.html">Movies</a>
+            <a href="./stream.html">Stream</a>
+            <a href="#">Events</a>
+            <a href="#">Plays</a>
+            <a href="#">Sports</a>
+            <a href="#">Activies</a>
+        </div>
+        <div class="right_side">
+            <a href="#">ListYourShow</a>
+            <a href="#">Corporats</a>
+            <a href="#">Offers</a>
+            <a href="#">Gift Cards</a>
+        </div>
+    </div>
+</div>
+    <!-- TOP MOVIE DETAILS -->
+    <section class="movie_header">
+
+        <h1>Meesaya Murukku 2 - (Tamil)</h1>
+
+        <div class="movie_tags">
+            <span>Movie runtime 2h 19m</span>
+            <span>UA 13+</span>
+            <span>Drama</span>
+            <span>Musical</span>
+        </div>
+
+    </section>
+
+
+    <!-- DATE AND FILTER SECTION -->
+    <section class="filter_section">
+
+        <!-- Dates -->
+        <div class="dates">
+
+            <div class="date active">
+                <b>SAT</b>
+                <strong>26</strong>
+                <small>SEP</small>
+            </div>
+
+            <div class="date">
+                <b>SUN</b>
+                <strong>27</strong>
+                <small>SEP</small>
+            </div>
+
+            <div class="date">
+                <b>MON</b>
+                <strong>28</strong>
+                <small>SEP</small>
+            </div>
+
+            <div class="date">
+                <b>TUE</b>
+                <strong>29</strong>
+                <small>SEP</small>
+            </div>
+
+            <div class="date">
+                <b>WED</b>
+                <strong>30</strong>
+                <small>SEP</small>
+            </div>
+
+            <div class="date">
+                <b>THU</b>
+                <strong>01</strong>
+                <small>OCT</small>
+            </div>
+
+            <div class="date">
+                <b>FRI</b>
+                <strong>02</strong>
+                <small>OCT</small>
+            </div>
+
+        </div>
+
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button>
+                Tamil-2D
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <button>
+                Free Range
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <button>
+                Special Formats
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <button>
+                Other Filters
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <button>
+                Preferred Time
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SHOW TIME INFORMATION -->
+    <div class="show_info">
+
+        <span>
+            <i class="fa-solid fa-moon"></i>
+            Late night shows
+        </span>
+
+        <span>
+            <i class="fa-solid fa-circle"></i>
+            Early morning shows
+        </span>
+
+        <button>
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <!-- THEATRES -->
+    <main class="theatre_container">
+
+
+        <!-- THEATRE 1 -->
+        <section class="theatre">
+
+            <div class="theatre_header">
+
+                <div class="theatre_logo black_logo"></div>
+
+                <div>
+                    <h3>MAYAJAAL Multiplex: ECR, Chennai
+                        <i class="fa-solid fa-circle-info"></i>
+                    </h3>
+
+                    <p>Non-cancellable</p>
+                </div>
+
+            </div>
+
+
+            <div class="theatre_actions">
+
+                <span>
+                    <i class="fa-solid fa-bucket"></i>
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-ticket"></i>
+                </span>
+
+            </div>
+
+
+            <div class="showtimes">
+
+                <button class="showtime">
+                    <a href="./seat.html">
+                    <p>11:30 PM</p>
+                    <small>4K DOLBY 7.1</small>
+                </a>
+                </button>
+
+                <button class="showtime">
+                    <b>11:55 PM</b>
+                    <small>4K DOLBY 7.1</small>
+                </button>
+
+                <button class="showtime">
+                    <b>11:57 PM</b>
+                    <small>4K DOLBY 7.1</small>
+                </button>
+
+                <button class="showtime">
+                    <b>11:58 PM</b>
+                    <small>4K DOLBY 7.1</small>
+                </button>
+
+                <button class="showtime">
+                    <b>11:59 PM</b>
+                    <small>4K DOLBY 7.1</small>
+                </button>
+
+                <button class="showtime">
+                    <b>11:59 PM</b>
+                    <small>4K SUITE 7.1</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- THEATRE 2 -->
+        <section class="theatre">
+
+            <div class="theatre_header">
+
+                <div class="theatre_logo rohini_logo">
+                    R
+                </div>
+
+                <div>
+                    <h3>Rohini Silver Screens: Koyambedu
+                        <i class="fa-solid fa-circle-info"></i>
+                    </h3>
+
+                    <p>Non-cancellable</p>
+                </div>
+
+            </div>
+
+
+            <div class="theatre_actions">
+
+                <span>
+                    <i class="fa-solid fa-bucket"></i>
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-ticket"></i>
+                </span>
+
+            </div>
+
+
+            <div class="showtimes">
+
+                <button class="showtime">
+                    <b>11:30 PM</b>
+                </button>
+
+                <button class="showtime">
+                    <b>11:55 PM</b>
+                    <small>2K/DOLBY 7.1</small>
+                </button>
+
+                <button class="showtime selected">
+                    <b>11:59 PM</b>
+                    <small>2K/ATMOS</small>
+                </button>
+
+                <button class="showtime">
+                    <b>11:59 PM</b>
+                    <small>2K/DOLBY 7.1</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- THEATRE 3 -->
+        <section class="theatre">
+
+            <div class="theatre_header">
+
+                <div class="theatre_logo small_logo">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+
+                <div>
+                    <h3>Kasi Talkies Dolby Atmos: Ashok Nagar
+                        <i class="fa-solid fa-circle-info"></i>
+                    </h3>
+
+                    <p>Cancellation available</p>
+                </div>
+
+            </div>
+
+
+            <div class="theatre_actions">
+
+                <span>
+                    <i class="fa-solid fa-bucket"></i>
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-ticket"></i>
+                </span>
+
+            </div>
+
+
+            <div class="showtimes">
+
+                <button class="showtime">
+                    <b>11:50 PM</b>
+                </button>
+
+                <button class="showtime">
+                    <b>11:55 PM</b>
+                    <small>2K ATMOS</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- THEATRE 4 -->
+        <section class="theatre">
+
+            <div class="theatre_header">
+
+                <div class="theatre_logo pvr_logo">
+                    PVR
+                </div>
+
+                <div>
+                    <h3>PVR: Heritage RSL ECR, Chennai
+                        <i class="fa-solid fa-circle-info"></i>
+                    </h3>
+
+                    <p>Cancellation available</p>
+                </div>
+
+            </div>
+
+
+            <div class="theatre_actions">
+
+                <span>
+                    <i class="fa-solid fa-bucket"></i>
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-ticket"></i>
+                </span>
+
+            </div>
+
+
+            <div class="showtimes">
+
+                <button class="showtime selected">
+                    <b>10:50 PM</b>
+                    <small>4DX</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- THEATRE 5 -->
+        <section class="theatre">
+
+            <div class="theatre_header">
+
+                <div class="theatre_logo pvr_logo">
+                    PVR
+                </div>
+
+                <div>
+                    <h3>PVR: Ampa Mall, Nelson Manickam Road
+                        <i class="fa-solid fa-circle-info"></i>
+                    </h3>
+
+                    <p>Cancellation available</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

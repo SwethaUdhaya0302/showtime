@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="nav_left">
+        <div class="logo">
+            <img src="./imges/applogo.png" class="logoimg"/>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search for Movies,Events,Sports,Plays and Activites"></input>
+        </div>
+        </div>
+        <div class="nav_right">
+        <div>
+            <select name="chennai" id="Chennai">
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi-NCR">Delhi-NCR</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Pune">Pune</option>
+            </select>
+        </div>
+        <button class="login_btn"><a href="./signup.html">
+            Sign-up</a>
+        </button>
+       
+    <input type="checkbox" id="menu_toggle">
+    <label for="menu_toggle" class="hamburg_icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    <label for="menu_toggle" class="overlay"></label>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Hey!</h2>
+        </div>
+        <div class="login-box">
+            <div class="profile-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="login-text">
+                <p>Unlock special offers &</p>
+                <p>great benefits</p>
+            </div>
+            <button>Login / Register</button>
+        </div>
+
+
+        <!-- MENU ITEMS -->
+        <div class="menu-list">
+
+            <div class="menu-item">
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="item-content">
+                    <span>Notifications</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <div class="item-content">
+                    <span>Your Orders</span>
+                    <small>View all your bookings & purchases</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-heart"></i>
+                <div class="item-content">
+                    <span>Your Wishlist</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-tv"></i>
+                <div class="item-content">
+                    <span>Stream Library</span>
+                    <small>Rented & Purchased Movies</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-credit-card"></i>
+                <div class="item-content">
+                    <span>Play Credit Card</span>
+                    <small>View your Play Credit Card details and offers</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-comment-dots"></i>
+                <div class="item-content">
+                    <span>Help & Support</span>
+                    <small>View commonly asked queries and Chat</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-gear"></i>
+                <div class="item-content">
+                    <span>Accounts & Settings</span>
+                    <small>Location, preferences and more</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-gift"></i>
+                <div class="item-content">
+                    <span>Rewards</span>
+                    <small class="text-secondary">View your rewards & unlock new ones</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-regular fa-life-ring"></i>
+
+                <div class="item-content">
+                    <span>BookAChange</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+        </div>
+    </aside>
+</nav>
+    <div class="catogries">
+        <div class="left_side">
+            <a href="./movie.html">Movies</a>
+            <a href="./stream.html">Stream</a>
+            <a href="./event.html">Events</a>
+            <a href="#">Plays</a>
+            <a href="#">Sports</a>
+            <a href="#">Activies</a>
+        </div>
+        <div class="right_side">
+            <a href="#">ListYourShow</a>
+            <a href="#">Corporats</a>
+            <a href="#">Offers</a>
+            <a href="#">Gift Cards</a>
+        </div>
+    </div>
+</div>
+<main>
+<section class="slider">
+
+        <div class="slider_container">
+
+            <div class="slide slide1">
+                </div>
+        
+
+            <div class="slide slide2">
+            </div>
+
+            <div class="slide slide3">
+            </div>
+
+            <div class="slide slide4">
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="recommended">
+        <h3>Recommended Movies</h3>
+        <div class="movie_container ">
+            <div class="movie_card">
+                <div class="img_card">
+                    <img src="./imges/bethlehem.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-star star"></i>
+                        9.4/10  218K+Votes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Bethlehem Kudumba Unit</h6>
+                <p>Comdey/Drama/Romantic</p>
+            </div>
+            </div>
+
+            <div class="movie_card">
+               <div class="img_card">
+                    <img src="./imges/theparadise.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-thumbs-up like"></i>
+                        15.1+ Likes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>The Paradise</h6>
+                <p>Action/Drama/Adventure</p>
+                </div>
+                </div>
+
+            <div class="movie_card">
+
+                <div class="img_card">
+                    <a href="./booking.html"><img src="./imges/meesay.jfif" class="img_size"></a>
+                    <h5>
+                        <i class="fa-solid fa-thumbs-up like"></i>
+                        449+Likes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Meesaya Murukku 2</h6>
+                <p>Drama/Musical</p>
+                </div>   
+                </div>
+             
+                <div class="movie_card">
+                <div class="img_card">
+                    <img src="./imges/mandaadi2.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-star star"></i>
+                        9.4/10  757.5+Votes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Mandaadi</h6>
+                <p>Action/Drama/Sports</p>
+
+                </div>
+            </div>
+             <div class="movie_card" >
+
+                <div class="img_card">
+                    <img src="./imges/avenger2.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-thumbs-up like"></i>
+                        273k+Likes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Avenger Endgame:Encore</h6>
+                <p>Action/Adventure/Fantasy</p>
+                </div>
+                
+            </div>
+          
+    
+
+        <div class="movie_card" id="movie5">
+                   <div class="img_card">
+                    <img src="./imges/dorothy.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-thumbs-up like"></i>
+                        273k+Likes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Dorothy</h6>
+                <p>Action/Adventure/Fantasy</p>
+                </div>   
+            </div>
+            
+             
+            <div class="movie_card ">
+                
+                <div class="img_card">
+                    <img src="./imges/leninpandiyan.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-thumbs-up like"></i>
+                        273k+Likes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Lenin Pandiyan</h6>
+                <p>Action/Adventure/Fantasy</p>
+                </div>
+               </div>
+               
+
+    
+              <div class="movie_card">
+
+                <div class="img_card">
+                    <img src="./imges/resident evil.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-star star"></i>
+                        9.4/10  757.5+Votes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Resident Evil</h6>
+                <p>Action/Thriller/Horror/Sci-Fi</p>
+                </div>
+                </div>
+            <div class="movie_card">
+                
+                <div class="img_card">
+                    <img src="./imges/Daayra.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-star star"></i>
+                        8.5/10  5.6k+Votes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Daayra</h6>
+                <p>Crime/Drama/Thriller</p>
+                </div>
+            </div>
+            <div class="movie_card" id="movie9">
+                 <div class="img_card">
+                    <img src="./imges/heart of beast.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-thumbs-up like"></i>
+                        273k+Likes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Heart Of Beast</h6>
+                <p>Action/Thriller/Horror/Sci-Fi</p>
+                </div>
+            </div>
+            <div class="movie_card">
+                 <div class="img_card">
+                    <img src="./imges/vvan.jfif" class="img_size">
+                    <h5>
+                        <i class="fa-solid fa-thumbs-up like"></i>
+                        273k+Likes</h5>
+                </div>
+                <div class="movie_name">
+                <h6>Vvan</h6>
+                <p>Action/Adventure/Thriller/Horror/Sci-Fi</p>
+                </div>
+            </div>
+
+
+        </div>
+    
+</div>
+</div>
+
+<div class="movie_reel">
+    <img src="./imges/moviereel.jpeg" style="border-radius: 10px;">
+
+</div>
+
+<div class="live_event">
+    <h4>The Best of Live Events</h4>
+
+    <a href="#event1" class="arrow left">
+            <i class="fa-solid fa-chevron-left"></i>
+        </a>
+    <div class="event_container">
+        <div class="event" id="event1">
+            <img src="./imges/comdey.jpeg">
+        </div>
+        <div class="event">
+            <img src="./imges/amusment.jpeg">
+        </div>
+        <div class="event">
+            <img src="./imges/theater.jpeg">
+        </div>
+        <div class="event">
+           <img src="./imges/kids.jpeg">
+        </div>
+        <div class="event" id="event1">
+            <img src="./imges/music.jpeg">
+        </div>
+        <div class="event">
+            <img src="./imges/art.jpeg">
+        </div>
+        <div class="event">
+            <img src="./imges/workshop.jpeg">
+        </div>
+        <div class="event">
+            <img src="./imges/games.jpeg">
+        </div>
+        <div class="event">
+            <img src="./imges/upskill.jpeg">
+        </div>
+        <div class="event" id="event8">
+            <img src="./imges/dance.jpeg">
+        </div>
+        
+    </div>
+    <a href="#event8" class="arrow right">
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>   
+</div>
+   
+    <div class="premiere">
+        <div class="play">
+            <div class="play_button">
+                <div class="icon_box">
+                <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="comment">
+                <h5>PREMIERE</h5>
+                <p>Watch new movies every day at home. </p>
+            </div>
+        </div>
+
+<!--Premier-->
+
+
+        <div class="premiere_list">
+                <h5>Premieres</h5>
+                <p>Brand new release every friday</p>
+                <div class="movie_container">
+                    <div class="movie_card2">
+                        <div class="img_card2">
+                           <img src="./imges/gail.jfif" class="img_size">        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Gail Daughtry and the <br>
+                            Celebrity Sex Pass (2026)</h6>
+                           <h6>English</h6>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card2">
+                           <img src="./imges/hen.jpg" class="img_size"> 
+                           <button>PREMIERE</button>       
+                        </div>
+                       <div class="movie_name">
+                          <h6>Hen</h6>
+                           <h6>Greek</h6>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card2">
+                           <img src="./imges/orphans.jfif" class="img_size"> 
+                           <button>PREMIERE</button>       
+                        </div>
+                       <div class="movie_name">
+                          <h6>The Orphens</h6>
+                           <h6>French</h6>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card2">
+                           <img src="./imges/gotti.jfif" class="img_size">
+                           <button>PREMIERE</button>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Gotti</h6>
+                           <h6>English</h6>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card2">
+                           <img src="./imges/bodyguard.jfif" class="img_size"> 
+                           <button>PREMIERE</button>       
+                        </div>
+                       <div class="movie_name">
+                          <h6>The Bodyguard</h6>
+                           <h6>English</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+              
+
+    <!--Music Studio-->
+        <div class="music_studio">
+            <h3>Your Music Studio</h3>
+            <!-- <a href="#movie1" class="arrow left">
+            <i class="fa-solid fa-chevron-left"></i>
+            </a> -->
+            <div class="movie_container">
+                <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/max-ur3.avif" class="img_size">
+                           <button>PROMOTER</button>
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Max Urbn Unmute Chennai<br>
+                              Spotify RAP 91</h6>
+                           <p>Concert</p>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/aura.avif" class="img_size">
+                           <button>PROMOTER</button>
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Dildit Dosajh-Aura India
+                            <br>Tour Concert
+                              Spotify RAP 91</h6>
+                           <p>Concert</p>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/route.avif" class="img_size">
+                           <!-- <button>PROMOTER</button> -->
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Route 143-Anuv Jain
+                            <br>EVP Flim City: chennai</h6>
+                           <p>Concert</p>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/u1.jfif" class="img_size">
+                           <button>PROMOTER</button>
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Sean Roldan"s Kodi Aruvi Concert
+                            <br>EVP Flim City: chennai</h6>
+                           <p>Concert</p>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/sivaji.jfif" class="img_size">
+                           <!-- <button>PROMOTER</button> -->
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Sivaji Hits-Lakshman Surthi
+                            <br>Music Concert</h6>
+                           <p>Concert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popular_event">
+                <h3>Popular Events</h3>
+                <div class="movie_container">
+                <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/smoothadi.jfif" class="img_size">
+                           <button>PROMOTER</button>
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>SMOOTH ADI- A TAMLI <br>
+                            STANDUP SHOW</h6>
+                           <p>Petbox-Sky Garden-Chennai</p>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/couplenotallowed.jfif" class="img_size">
+                           <button>PROMOTER</button>
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Couples Not Allowed-
+                            <br>A Standup-Comdey
+                              Show</h6>
+                           <p>Trinity studio-Kodambakkam</p>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/allowme.jfif" class="img_size">
+                           <!-- <button>PROMOTER</button> -->
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Allow Me!:Standup Comdey
+                            <br>by Rahul Dua</h6>
+                           <p>Asian College of Journalism-Chennai</p>
+                        </div>
+                    </div>
+
+                    <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/sirigamapadhanee.avif" class="img_size">
+                           <!-- <button>PROMOTER</button> -->
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Siri Gama Padha Nee 3.0
+                            <br>Punch Unpaid Therpist</h6>
+                           <p>Chennai</p>
+                        </div>
+                    </div>
+
+                     <div class="movie_card2">
+                        <div class="img_card3">
+                           <img src="./imges/letstake.webp" class="img_size">
+                           <!-- <button>PROMOTER</button> -->
+                           <span>Sat,24 Dec</span>        
+                        </div>
+                       <div class="movie_name">
+                          <h6>Let's Take About It!
+                            <br>Medai-The Stage Alwarpet</h6>
+                           <p>Chennai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom1">
+                <span>
+                    <i class="fa-solid fa-tents"></i>
+                    List Your Show   Got,Show,event,activity or a great exprience?
+                    and Partner with us get listed on BookMyShow
+                    <button>Contact-today!</button>
+
+                </span>
+            </div>
+            
+                <footer class="footer">
+
+    <!-- Top Features -->
+    <div class="footer_features">
+
+        <div class="feature">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <p>24/7 CUSTOMER CARE</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-ticket"></i>
+            <div>
+                <h4>RESEND BOOKING CONFIRMATION</h4>
+            </div>
+        </div>
+
+        <div class="feature">
+            <i class="fa-regular fa-envelope"></i>
+            <div>
+                <h4>SUBSCRIBE TO THE NEWSLETTER</h4>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer Links -->
+    <div class="footer_content">
+
+        <div class="footer_section">
+            <h3>MOVIES NOW SHOWING IN CHENNAI</h3>
+            <p>
+                Meesaya Murukku 2 |
+                Dorothy |
+                Mandaadi |
+                Avengers Endgame: Encore |
+                The Paradise |
+                Lenin Pandian |
+                Heart of the Beast |
+                Resident Evil |
+                The Wives |
+                Force of the Forest
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>UPCOMING MOVIES PER WEEK</h3>
+            <p>
+                Upcoming Movies Today |
+                Upcoming Movies Tomorrow |
+                Upcoming Movies This Weekend
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>MOVIES BY GENRE</h3>
+            <p>
+                Drama Movies |
+                Action Movies |
+                Thriller Movies |
+                Adventure Movies |
+                Comedy Movies |
+                Crime Movies |
+                Romantic Movies |
+                Fantasy Movies |
+                Mystery Movies |
+                Musical Movies
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>MOVIES BY LANGUAGE</h3>
+            <p>
+                Movies in Tamil |
+                Movies in English |
+                Movies in Hindi |
+                Movies in Malayalam |
+                Movies in Telugu |
+                Movies in Kannada |
+                Movies in Tamil |
+                Movies in Bengali |
+                Movies in Marathi |
+                Movies in Odia
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>SPORTS EVENTS IN CHENNAI</h3>
+            <p>
+                Running |
+                Bowling |
+                Mixed Martial Arts |
+                Basketball |
+                Cricket |
+                Horse Race |
+                Sailing |
+                Chess |
+                Cycling |
+                E Sports
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>EVENTS IN TOP CITIES</h3>
+            <p>
+                Events in Mumbai |
+                Events in Delhi-NCR |
+                Events in Chennai |
+                Events in Bengaluru |
+                Events in Hyderabad |
+                Events in Pune |
+                Events in Ahmedabad |
+                Events in Kolkata |
+                Events in Kochi
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>CINEMAS IN TOP CITIES</h3>
+            <p>
+                Cinemas in Mumbai |
+                Cinemas in Delhi-NCR |
+                Cinemas in Chennai |
+                Cinemas in Bengaluru |
+                Cinemas in Hyderabad |
+                Cinemas in Pune |
+                Cinemas in Ahmedabad |
+                Cinemas in Kolkata |
+                Cinemas in Kochi
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>PLAYS IN TOP CITIES</h3>
+            <p>
+                Plays in Mumbai |
+                Plays in Delhi-NCR |
+                Plays in Chennai |
+                Plays in Bengaluru |
+                Plays in Hyderabad |
+                Plays in Pune |
+                Plays in Ahmedabad |
+                Plays in Kolkata |
+                Plays in Kochi
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>ACTIVITIES IN TOP CITIES</h3>
+            <p>
+                Activities in Mumbai |
+                Activities in Delhi-NCR |
+                Activities in Chennai |
+                Activities in Bengaluru |
+                Activities in Hyderabad |
+                Activities in Pune |
+                Activities in Ahmedabad |
+                Activities in Kolkata |
+                Activities in Kochi
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>MOVIES NOW SHOWING</h3>
+            <p>
+                The Wives - Forest of the Forest |
+                The Paradise |
+                Hanuman Ash |
+                Avengers Endgame: Encore |
+                Meesaya Murukku 2 |
+                Mirzapur: The Movie |
+                Dorothy |
+                Mandaadi |
+                Citylights |
+                Mitrata
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>COUNTRIES</h3>
+            <p>
+                Indonesia |
+                Singapore |
+                Sri Lanka |
+                West Indies
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>HELP</h3>
+            <p>
+                About Us |
+                Contact Us |
+                Current Opening |
+                Press Release |
+                Press Coverage |
+                FAQs |
+                Terms and Conditions |
+                Privacy Policy
+            </p>
+        </div>
+
+
+        <div class="footer_section">
+            <h3>BOOKMYSHOW EXCLUSIVES</h3>
+            <p>
+                Lollapalooza India |
+                BookAChange |
+                Corporate Vouchers |
+                Gift Cards |
+                List My Show |
+                Offers |
+                Stream |
+                Trailers
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Logo -->
+    <div class="footer_bottom">
+
+        <div class="footer_logo">
+            <span>book</span><b>my</b><span>show</span>
+        </div>
+
+        <div class="social_icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <p class="copyright">
+            Copyright 2026 © Bigtree Entertainment Pvt. Ltd. All Rights Reserved
+        </p>
+
+        <p class="copyright_text">
+            The content and images used on this site are copyright protected and
+            copyrights vest with the respective owners. The usage of the content
+            and images on this website is intended to promote the works and no
+            endorsement of the artist shall be implied.
+        </p>
+
+    </div>
+
+</footer>
+            </div>
+
+    
+    
+    
+    
+    </div>
+
+
+
+
+</main>
+</body>
+</html>

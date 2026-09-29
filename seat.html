@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="./seat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="nav_left">
+        <div class="logo">
+            <img src="./imges/applogo.png" class="logoimg"/>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search for Movies,Events,Sports,Plays and Activites"></input>
+        </div>
+        </div>
+        <div class="nav_right">
+        <div>
+            <select name="Mumbai" id="Mumbai">
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi-NCR">Delhi-NCR</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Pune">Pune</option>
+            </select>
+        </div>
+        <button class="login_btn"><a href="./signup.html">
+            Sign-up</a>
+        </button>
+       
+    <input type="checkbox" id="menu_toggle">
+    <label for="menu_toggle" class="hamburg_icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    <label for="menu_toggle" class="overlay"></label>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Hey!</h2>
+        </div>
+        <div class="login-box">
+            <div class="profile-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="login-text">
+                <p>Unlock special offers &</p>
+                <p>great benefits</p>
+            </div>
+            <button>Login / Register</button>
+        </div>
+
+
+        <!-- MENU ITEMS -->
+        <div class="menu-list">
+
+            <div class="menu-item">
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="item-content">
+                    <span>Notifications</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <div class="item-content">
+                    <span>Your Orders</span>
+                    <small>View all your bookings & purchases</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-heart"></i>
+                <div class="item-content">
+                    <span>Your Wishlist</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-tv"></i>
+                <div class="item-content">
+                    <span>Stream Library</span>
+                    <small>Rented & Purchased Movies</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-credit-card"></i>
+                <div class="item-content">
+                    <span>Play Credit Card</span>
+                    <small>View your Play Credit Card details and offers</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-comment-dots"></i>
+                <div class="item-content">
+                    <span>Help & Support</span>
+                    <small>View commonly asked queries and Chat</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="menu-item disabled">
+                <i class="fa-solid fa-gear"></i>
+                <div class="item-content">
+                    <span>Accounts & Settings</span>
+                    <small>Location, preferences and more</small>
+                </div>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
+            <div class="menu-item">
+                <i class="fa-regular fa-gift"></i>
+                <div class="item-content">
+                    <span>Rewards</span>
+                    <small class="text-secondary">View your rewards & unlock new ones</small>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-regular fa-life-ring"></i>
+
+                <div class="item-content">
+                    <span>BookAChange</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+        </div>
+    </aside>
+</nav>
+    <div class="catogries">
+        <div class="left_side">
+            <a href="./movie.html">Movies</a>
+            <a href="./stream.html">Stream</a>
+            <a href="#">Events</a>
+            <a href="#">Plays</a>
+            <a href="#">Sports</a>
+            <a href="#">Activies</a>
+        </div>
+        <div class="right_side">
+            <a href="#">ListYourShow</a>
+            <a href="#">Corporats</a>
+            <a href="#">Offers</a>
+            <a href="#">Gift Cards</a>
+        </div>
+    </div>
+</div>
+   
+    <!-- Background seats -->
+    <div class="seat-background">
+
+        <div class="seat-row">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="seat-row">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="seat-row">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="seat-row">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="seat-row">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="seat-row">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+    </div>
+
+
+    <!-- Popup -->
+    <div class="popup">
+
+        <h2>How many seats?</h2>
+
+        <!-- Scooter -->
+        <div class="vehicle">
+            <i class="fa-solid fa-motorcycle"></i>
+        </div>
+
+        <!-- Pink selected circle -->
+        <div class="selected-dot"></div>
+
+
+        <!-- Ticket types -->
+        <div class="ticket-container">
+
+            <div class="ticket">
+                <p>SUPER STAR</p>
+                <h3>₹190</h3>
+                <span>SOLD OUT</span>
+            </div>
+
+            <div class="ticket">
+                <p>PLATINUM</p>
+                <h3>₹180</h3>
+                <span>SOLD OUT</span>
+            </div>
+
+            <div class="ticket">
+                <p>GOLDSTAR</p>
+                <h3>₹160</h3>
+                <span>SOLD OUT</span>
+            </div>
+
+        </div>
+
+
+        <!-- Best Seller -->
+        <div class="best-seller">
+
+            <input type="checkbox" id="best">
+
+            <label for="best">
+                Book the <b>BestSeller</b> seats in this cinema at no extra cost!
+            </label>
+
+        </div>
+
+
+        <!-- Button -->
+        <button class="select-btn"><a href="./seatbook.html">
+            Select Seats</a>
+        </button>
+
+    </div>
+
+</body>
+</html>
